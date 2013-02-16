@@ -21,8 +21,8 @@
 #       only: "*"
 #
 
-translations:
-  - file: 'app/assets/javascripts/i18n/en.js'
-    only: 'en.js.*'
-  - file: 'app/assets/javascripts/i18n/admin.en.js'
-    only: 'en.admin_js.*'
+#translations:
+#  - file: 'app/assets/javascripts/i18n/en.js'
+#    only: 'en.js.*'
+#  - file: 'app/assets/javascripts/i18n/admin.en.js'
+#    only: 'en.admin_js.*'
