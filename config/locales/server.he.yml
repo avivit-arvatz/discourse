@@ -1,93 +1,95 @@
 he:
-  title: "Discourse"
-  topics: "Topics"
+  title: "דיסקורס"
+  topics: "נושאים"
 
-  is_reserved: "is reserved"
-  too_many_mentions: "has too many users mentioned"
-  too_many_images: "has too many images"
-  too_many_links: "has too many links"
-  just_posted_that: "is too similar to what you recently posted"
-  has_already_been_used: "has already been used"
-  invalid_characters: "contains invalid characters"
-  is_invalid: "is invalid; try to be a little more descriptive"
+  is_reserved: "שמור"
+  too_many_mentions: "הזכרת יותר מדי משתמשים"
+  too_many_images: "השתמשת ביותר מדי תמונות"
+  too_many_links: "השתמשת ביותר מדי לינקים"
+  just_posted_that: "זה יותר מדי דומה לדברים שכבר פרסמת"
+  has_already_been_used: "בזה כבר השתמשת"
+  invalid_characters: "מכיל תווים לא חוקיים"
+  is_invalid: "לא חוקי. אפשר לנסות תיאור יותר מפורט"
 
   education:
     until_posts:
-      one: "post"
-      other: "%{count} posts"
+      one: "פוסט"
+      other: " פוסטים %{count}"
 
-    'new-topic': |
-      Welcome to %{site_name} &mdash; **thanks for starting a new conversation!**
+    'נושא חדש': |
+      תודה שפתחת דיון חדש! %{site_name} &mdash - ברוכים הבאים ל; 
 
-      Keep in mind as you compose your topic:
+      בעת כתיבת פוסט חשוב לזכור ש:
 
-      - Does the title adequately describe what someone could reasonably expect to find if they opened your topic?
+      - כותרת הפוסט תתאר אותו באופן שיאפשר למי שקורא אותה להבין על הפוסט מדבר
 
-      - The first post defines your topic: What is this about? Who would be interested in it? Why does it matter? What kind of responses are you hoping for from the community?
+      -הפוסט הראשון מגדיר את הנושא. במה הוא עוסק? מי עשוי להתעניין בזה? למה זה חשוב? אילו תגובות הקהילה אמורה לתת לזה?  
 
-      - Try to choose the right words so others can *find* your topic. If it needs to be in a category, pick an appropriate category.
+      - חשוב להשתמש במילים הנכונות די שאחריםן יוכלו *למצוא* את הנושא הזה. אם הנושא שייך לקטגוריה מסויימת, חשוב למצוא אותה ולשייך אותו אליה. 
+      .[see our FAQ](/faq)  להסברים נוספים 
+      ההודעה הזו תופיע רק בפעם הראשונה %{education_posts_text}.
 
-      For more guidance, [see our FAQ](/faq). This panel will only appear for your first %{education_posts_text}.
+    'תגובה חדשה': |
+       %{site_name} &mdashברוכים הבאים ל-; 
+       **תודה שתרמת לדיון!**
 
-    'new-reply': |
-      Welcome to %{site_name} &mdash; **thanks for contributing to the conversation!**
+      כשכותבים תגובה חשוב לעבוד לפי הכללים הבאים:
 
-      Keep in mind as you compose your reply:
+      - התגובה חייבת לתרום לדיון, גם אם רק במעט?
 
-      - Does your reply improve the conversation in some way, however small?
+      - יש להתייחס בכבוד לחברי הקהילה האחרים ולהתייחס אליהם כפי שהיינו רוצים שיתייחסו אלינו
 
-      - Treat your fellow community members with the same respect you'd wish to be treated.
+      - טוב להיות ביקורתיים, אבל יש לזכור לבקר את *הרעיונות* ולא את האנשים.
 
-      - It's fine to be critical, but remember to criticize *ideas*, not people.
-
-      For more guidance, [see our FAQ](/faq). This panel will only appear for your first %{education_posts_text}.
+      [see our FAQ](/faq)להנחיות נוספות בקר כאן. 
+      הודעה זו תופיע רק בפעם הראשונה %{education_posts_text}.
 
 
   activerecord:
     attributes:
       category:
-        name: "Category Name"
+        name: "שם קטגוריה"
       post:
-        raw: "Body"
+        raw: "גוף"
     errors:
       models:
         topic:
           attributes:
             archetype:
-              cant_send_pm: "Sorry, you cannot send a private message to that user."
+              cant_send_pm: "'צטערת, אין באפשרותך לשלוח הודעה פרטית למשתמש הזה."
 
   user_profile:
-    no_info_me: "<div class='missing-profile'>the About Me field of your profile is currently blank, <a href='/users/%{username_lower}/preferences'>would you like to fill it out?</a></div>"
-    no_info_other: "<div class='missing-profile'>%{name} hasn't entered anything in the About Me field of their profile yet</div>"
+    no_info_me: "<div class='missing-profile'>לא סיפרת על עצמך עוד שום דבר, <a href='/users/%{username_lower}/preferences'>would you like to fill it out?</a></div>"
+    no_info_other: "<div class='missing-profile'>%{name} ל=עוד לא כתבו כאן שום דבר</div>"
 
   category:
-    topic_prefix: "Category definition for %{category}"
+    topic_prefix: "%{category} הגדרת קטגוריה עבור"
 
   trust_levels:
     new:
-      title: "new user"
+      title: "משתמש חדש"
     basic:
-      title: "basic user"
+      title: "משתמש מתחיל"
     regular:
-      title: "regular user"
+      title: "משתמש קבוע"
     experienced:
-      title: "experienced user"
+      title: "משתמש מנוסה"
     advanced:
-      title: "advanced user"
+      title: "משתמש מתקדם"
     moderator:
-      title: "moderator"
+      title: "איש קשר"
 
   rate_limiter:
-    too_many_requests: "You're doing that too often. Please wait %{time_left} before trying again."
+    too_many_requests: " לפני שאפשר יהיה לעשות זאת שוב %{time_left} זה קורה לעיתים קרובות מדי. צריך לחכות."
     hours:
-      one: "1 hour"
-      other: "%{count} hours"
+      one: "שעה אחת"
+      other: " שעות%{count}"
     minutes:
-      one: "1 minute"
-      other: "%{count} minutes"
+      one: "דקה אחת"
+      other: "דקות %{count}"
     seconds:
-      one: "1 second"
-      other: "%{count} seconds"
+      one: "שניה אחת"
+      other: " שניות%{count}"
 
   datetime:
     distance_in_words:
